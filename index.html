@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Toop Cor Pro — Recuperação Natural</title>
+  <meta name="description" content="Toop Cor Pro — Recuperação natural da cor do cabelo. Sem químicas, resultados reais. Ofertas por tempo limitado." />
+  <style>
+    :root{
+      --max-w:1150px;
+      --accent:#0bd265;
+      --accent-dark:#0aa957;
+      --bg:#ffffff;
+      --muted:#667085;
+      --card:#fbfbfb;
+      --radius:14px;
+      --glass: rgba(255,255,255,0.6);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;}
+    body{
+      margin:0; font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+      background:var(--bg); color:#0b1220; -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale; line-height:1.45;
+    }
+
+    .wrap{max-width:var(--max-w);margin:0 auto;padding:28px 20px;}
+
+    header{display:flex;gap:28px;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:18px;align-items:center}
+    .brand img{width:90px;height:90px;object-fit:cover;border-radius:12px}
+    .brand h1{font-size:20px;margin:0}
+
+    .hero{display:flex;gap:32px;align-items:center;padding:36px 0}
+    .hero .left{flex:1}
+    .hero h2{font-size:34px;margin:0 0 12px}
+    .hero p.lead{margin:0 0 20px;color:var(--muted);font-size:17px}
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+
+    /* Animação do botão pulsando */
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.06); }
+      100% { transform: scale(1); }
+    }
+    .btn.primary.pulse {
+      animation: pulse 1.8s infinite ease-in-out;
+    }
+
+    .btn{display:inline-block;padding:14px 20px;border-radius:12px;text-decoration:none;font-weight:700}
+    .btn.primary{background:var(--accent);color:#fff}
+    .btn.ghost{background:transparent;color:var(--accent);border:2px solid var(--accent)}
+
+    .hero .right{width:420px;max-width:40%}
+    .phone-image{width:100%;border-radius:18px;object-fit:cover;display:block;box-shadow:0 20px 40px rgba(12,40,80,0.08)}
+
+    .offers{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+    .offer{background:var(--card);padding:18px;border-radius:14px;border:1px solid #ececec;text-align:center}
+    .offer.best{border-color:var(--accent);box-shadow:0 8px 30px rgba(11,210,101,0.12)}
+    .offer h3{margin:0 0 6px}
+    .price{font-size:28px;font-weight:800;margin:12px 0}
+    .offer .buy{display:inline-block;padding:10px 14px;border-radius:12px;text-decoration:none;font-weight:700}
+    .buy.buy-1{background:#111;color:#fff}
+    .buy.buy-3{background:var(--accent);color:#fff}
+    .buy.buy-5{background:var(--accent-dark);color:#fff}
+
+    .specs{margin:36px 0;padding:22px;border-radius:12px;background:linear-gradient(180deg,#ffffff, #fcfcff);border:1px solid #eef3ff}
+    .specs h3{margin-top:0}
+    .spec-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+    .spec-item{background:#fff;padding:12px;border-radius:10px;border:1px solid #f1f3f8}
+    .spec-table{width:100%;border-collapse:collapse}
+    .spec-table td{padding:8px;border-bottom:1px dashed #eee}
+
+    .testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:30px 0}
+    .testi{background:#f7f8fb;padding:16px;border-radius:12px}
+
+    footer{text-align:center;color:var(--muted);padding:28px 10px}
+
+    .whats-float{position:fixed;right:18px;bottom:18px;background:#25D366;border-radius:999px;padding:12px 14px;box-shadow:0 12px 30px rgba(37,211,102,0.22);z-index:9999}
+    .whats-float a{display:flex;gap:10px;align-items:center;color:#fff;text-decoration:none;font-weight:700}
+    .whats-float img{width:24px;height:24px}
+
+    @media (max-width:980px){
+      .hero{flex-direction:column;align-items:flex-start}
+      .hero .right{width:100%;max-width:100%}
+      .offers{grid-template-columns:repeat(2,1fr)}
+      .testimonials{grid-template-columns:repeat(2,1fr)}
+      header{flex-direction:column;align-items:flex-start}
+    }
+    @media (max-width:640px){
+      .offers{grid-template-columns:1fr}
+      .hero h2{font-size:26px}
+      .brand img{width:72px;height:72px}
+      .spec-grid{grid-template-columns:1fr}
+      .testimonials{grid-template-columns:1fr}
+      .hero p.lead{font-size:15px}
+      .wrap{padding:20px}
+      .price{font-size:24px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <img src="https://i.supaimg.com/3bcb0388-a26f-4f13-8e7b-aec4567f5e34.jpg" alt="Toop Cor Pro" />
+        <div>
+          <h1>Toop Cor Pro</h1>
+          <div style="color:var(--muted);font-size:13px">Recuperação natural da cor do cabelo · 90 dias garantia</div>
+        </div>
+      </div>
+      <nav style="margin-left:auto;display:flex;gap:12px;align-items:center">
+        <a class="btn ghost" href="#specs">Especificações</a>
+        <a class="btn" style="background:transparent;color:#111;border:2px solid #111;" href="#ofertas">Comprar</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="left">
+        <h2>Recupere a cor natural do seu cabelo sem tinta nem química.</h2>
+        <p class="lead">Fórmula avançada que age na raiz, restaura pigmentação e devolve brilho e vigor. Resultado visível em semanas.</p>
+
+        <div class="cta-row">
+          <a class="btn primary pulse"
+             href="https://entrega.logzz.com.br/pay/mem0gp0y4/ydsjt-3-frascos">
+             Oferta 3 Frascos — Compre agora e pague só na entrega!
+          </a>
+        </div>
+
+        <!-- AVISO URGÊNCIA -->
+        <div style="margin-top:14px;padding:12px 16px;border-radius:10px;background:#fff3cd;
+             color:#7c5a00;display:flex;align-items:center;gap:10px;font-size:15px;
+             font-weight:600;border:1px solid #ffe9a4">
+          ⏳⚠️ Atenção: Oferta por Tempo Limitado
+          <span id="timer" style="margin-left:auto;font-weight:700"></span>
+        </div>
+        <div style="color:#b88900;font-size:14px;margin-top:4px">
+          O estoque promocional pode acabar a qualquer momento.
+        </div>
+
+        <div style="margin-top:18px;color:var(--muted);font-size:14px">
+          Estoque promocional. Envio em 24–48h. Garantia de 90 dias.
+        </div>
+      </div>
+
+      <div class="right">
+        <img class="phone-image"
+             src="https://i.supaimg.com/42762096-477c-415f-8f31-b589e6241f94.jpg"
+             alt="Frasco Toop Cor Pro com selo 90 dias" />
+      </div>
+    </section>
+
+    <section id="ofertas" class="offers">
+      <div class="offer">
+        <h3>1 Frasco — Teste</h3>
+        <div style="color:var(--muted);font-size:13px">Ideal para experimentar</div>
+        <div class="price">R$ 197,00</div>
+        <a class="buy buy-1"
+           href="https://entrega.logzz.com.br/pay/mem0gp0y4/lpezi-1-frasco">Quero Testar</a>
+      </div>
+
+      <div class="offer best">
+        <h3>3 Frascos — Mais Vendido</h3>
+        <div style="color:var(--muted);font-size:13px">Tratamento completo — mais resultados</div>
+        <div class="price">R$ 297,00</div>
+        <a class="buy buy-3"
+           href="https://entrega.logzz.com.br/pay/mem0gp0y4/ydsjt-3-frascos">Comprar com Desconto</a>
+      </div>
+
+      <div class="offer">
+        <h3>5 Frascos — Super Oferta</h3>
+        <div style="color:var(--muted);font-size:13px">Melhor custo-benefício</div>
+        <div class="price">R$ 397,00</div>
+        <a class="buy buy-5"
+           href="https://entrega.logzz.com.br/pay/mem0gp0y4/qkduk-5-frascos">Garantir Oferta</a>
+      </div>
+    </section>
+
+    <section class="specs" id="specs">
+      <h3>Especificações do Produto — Toop Cor Pro</h3>
+      <div class="spec-grid">
+        <div class="spec-item">
+          <strong>O que é</strong>
+          <p style="margin:6px 0;color:var(--muted)">Solução tópica natural que ajuda a recuperar pigmentos capilares e reduzir fios brancos com uso contínuo.</p>
+          <table class="spec-table">
+            <tr><td>Conteúdo</td><td>1 Frasco — 30 ml</td></tr>
+            <tr><td>Ingredientes</td><td>Extratos botânicos, aminoácidos, coenzimas (sem PPD, sem amônia)</td></tr>
+            <tr><td>Modo de uso</td><td>Aplicar diariamente na raiz por 2–3 meses, massagear 1–2 minutos</td></tr>
+            <tr><td>Resultados</td><td>Visíveis em 4–8 semanas (varia por pessoa)</td></tr>
+            <tr><td>Garantia</td><td>90 dias — satisfação ou seu dinheiro de volta</td></tr>
+          </table>
+        </div>
+
+        <div class="spec-item">
+          <strong>Precauções & Conservação</strong>
+          <p style="margin:6px 0;color:var(--muted)">Evitar contato com olhos. Manter em local seco, ao abrigo da luz. Não ingerir. Uso externo.</p>
+          <ul style="margin:6px 0 0 16px;color:var(--muted)">
+            <li>Conservar entre 15–30°C</li>
+            <li>Manter fora do alcance de crianças</li>
+            <li>Em caso de irritação, suspender o uso</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3 style="text-align:center;margin:18px 0 12px">Provas Sociais</h3>
+      <div class="testimonials">
+        
+        <div class="testi">
+          <img style="width:100%;border-radius:8px"
+               src="https://i.supaimg.com/d5261d3c-6f49-4b0d-b30a-f2048a1a0a1e.jpg" alt="Depoimento 1"/>
+          <strong>Maria, 42 anos:</strong><br/>
+          "Passei anos escondendo meus fios. Quando vi a mudança, chorei no espelho. Parecia que eu tinha voltado no tempo. Voltou minha cor natural muito rápido!"
+        </div>
+
+        <div class="testi">
+          <img style="width:100%;border-radius:8px"
+               src="https://i.supaimg.com/02bfa6e0-653f-4c34-bdbc-50fd07169ffe.jpg" alt="Depoimento 2"/>
+          <strong>Rogério, 51:</strong><br/>
+          "Eu já não acreditava em nada. Quando minha filha falou ‘pai, teu cabelo tá voltando’, meu peito até esquentou. Não tem preço. Minhas entradas diminuíram. Curti demais."
+        </div>
+
+        <div class="testi">
+          <img style="width:100%;border-radius:8px"
+               src="https://i.supaimg.com/67211c77-8722-4ad9-9050-0a3dfb491001.jpg" alt="Depoimento 3"/>
+          <strong>Cláudia, 39:</strong><br/>
+          "Depois de tanta frustração, ver meu cabelo mais vivo me deu uma força nova. Me senti bonita de novo, sabe? Meu cabelo ficou mais vivo e brilhoso."
+        </div>
+
+      </div>
+    </section>
+
+    <footer>
+      <div style="max-width:800px;margin:0 auto;color:var(--muted)">
+        © Toop Cor Pro — Todos os direitos reservados · Atendimento via WhatsApp
+      </div>
+    </footer>
+  </div>
+
+  <div class="whats-float" aria-hidden="false">
+    <a href="https://wa.me/5549989049810?text=Quero%20saber%20mais%20sobre%20o%20Toop%20Cor%20Pro"
+       target="_blank" rel="noopener noreferrer">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+           style="width:26px;height:26px" />
+      <span style="font-size:14px;line-height:1">Falar no Whats</span>
+    </a>
+  </div>
+
+  <!-- SCRIPT TIMER 5 MIN -->
+  <script>
+    let time = 5 * 60;
+    const el = document.getElementById("timer");
+
+    function tick() {
+      const m = String(Math.floor(time / 60)).padStart(2, "0");
+      const s = String(time % 60).padStart(2, "0");
+      el.textContent = `${m}:${s}`;
+      time--;
+      if (time >= 0) {
+        setTimeout(tick, 1000);
+      } else {
+        time = 5 * 60;
+        tick();
+      }
+    }
+    tick();
+  </script>
+
+</body>
+</html>
